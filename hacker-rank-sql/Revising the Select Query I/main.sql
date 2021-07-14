@@ -1,0 +1,1 @@
+select * from CITY where CITY.COUNTRYCODE='USA' and CITY.POPULATION > 100000;
