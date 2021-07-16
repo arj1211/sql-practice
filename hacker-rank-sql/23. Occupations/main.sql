@@ -1,0 +1,2 @@
+select Doctor, Professor, Singer, Actor from (select * from (select ROW_NUMBER() OVER(PARTITION BY Occupation ORDER BY Name) AS RN, Name, Occupation from OCCUPATIONS) as T
+PIVOT(min(Name) for Occupation in (Doctor, Professor, Singer, Actor)) as PT) as T2;
