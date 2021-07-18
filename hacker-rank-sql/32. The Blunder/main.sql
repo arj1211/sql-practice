@@ -1,0 +1,1 @@
+select CAST(CEILING(AVG(Diff)) as int) from (select CAST((Salary - Wrong) as float) as Diff from (select Salary, CAST(REPLACE(STR(Salary),'0','') as int) as Wrong from EMPLOYEES) T) U;
