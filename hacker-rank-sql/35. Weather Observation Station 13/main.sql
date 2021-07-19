@@ -1,0 +1,1 @@
+select CAST(sum(LAT_N) as numeric(10,4)) from STATION where LAT_N > 38.78 and LAT_N < 137.2345;

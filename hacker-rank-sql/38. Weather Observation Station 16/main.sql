@@ -1,0 +1,1 @@
+select cast(min(lat_n) as numeric(10,4)) from station where lat_n > 38.778;
